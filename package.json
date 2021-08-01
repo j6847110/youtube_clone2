@@ -1,0 +1,19 @@
+{
+  "name": "youtube_clone2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j6847110/youtube_clone2.git"
+  },
+  "author": "Minsung Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j6847110/youtube_clone2/issues"
+  },
+  "homepage": "https://github.com/j6847110/youtube_clone2#readme"
+}
