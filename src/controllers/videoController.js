@@ -1,10 +1,7 @@
 const trending = (req, res) => res.render("home");
-const see = (req, res) => {
-  return res.send(`Watch video #${req.params.id}`);
-};
-const edit = (req, res) => {
-  return res.send(`Edit video #${req.params.id}`);
-};
+const see = (req, res) => res.render("watch");
+
+const edit = (req, res) => res.render("edit");
 
 const search = (req, res) => res.send("home");
 const deleteVideo = (req, res) => {
