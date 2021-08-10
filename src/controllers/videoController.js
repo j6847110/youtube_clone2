@@ -1,4 +1,10 @@
-const trending = (req, res) => res.render("home");
+const fakeUser = {
+  username: "test",
+  loggedIn: true,
+};
+
+const trending = (req, res) =>
+  res.render("home", { pageTitle: "Home", fakeUser });
 const see = (req, res) => res.render("watch");
 
 const edit = (req, res) => res.render("edit");
