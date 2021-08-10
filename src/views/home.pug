@@ -1,5 +1,9 @@
 extends base.pug
+include mixins/video
 
 block content 
     h1 Home!
-    button send
+    each a in videos 
+        +video(a)
+    else
+        li Sorry nothing Found

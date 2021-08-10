@@ -1,10 +1,32 @@
-const fakeUser = {
-  username: "test",
-  loggedIn: true,
+const trending = (req, res) => {
+  const videos = [
+    {
+      title: "1st Video",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 minutes ago",
+      views: 59,
+      id: 1,
+    },
+    {
+      title: "2nd Video",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 minutes ago",
+      views: 59,
+      id: 1,
+    },
+    {
+      title: "3rd Video",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 minutes ago",
+      views: 59,
+      id: 1,
+    },
+  ];
+  res.render("home", { pageTitle: "Home", videos });
 };
-
-const trending = (req, res) =>
-  res.render("home", { pageTitle: "Home", fakeUser });
 const see = (req, res) => res.render("watch");
 
 const edit = (req, res) => res.render("edit");
