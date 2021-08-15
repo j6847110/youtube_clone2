@@ -1,4 +1,4 @@
-const videos = [
+let videos = [
   {
     title: "1st Video",
     rating: 5,
@@ -25,20 +25,24 @@ const videos = [
   },
 ];
 const trending = (req, res) => {
-  res.render("home", { pageTitle: "Home", videos });
+  return res.render("home", { pageTitle: "Home", videos });
 };
 const watch = (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   const video = videos[id - 1];
-  res.render("watch", { pageTitle: `Watching ${video.title}`, video });
+  return res.render("watch", { pageTitle: `Watching ${video.title}`, video });
 };
-const edit = (req, res) => {
-  res.render("edit");
+const getEdit = (req, res) => {
+  const { id } = req.params;
+  const video = videos[id - 1];
+  return res.render("edit", { pageTitle: `Editing : ${video.title}`, video });
 };
-const search = (req, res) => res.send("home");
-const deleteVideo = (req, res) => {
-  console.log(req.params);
-  return res.send("delete");
+
+const postEdit = (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+  videos[id - 1].title = title;
+  return res.redirect(`/videos/${id}`);
 };
-const upload = (req, res) => res.send("upload Video");
-export { trending, watch, edit, search, deleteVideo, upload };
+
+export { trending, watch, getEdit, postEdit };
