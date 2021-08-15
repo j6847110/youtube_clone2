@@ -1,7 +1,7 @@
 {
   "name": "youtube_clone2",
   "version": "1.0.0",
-  "description": "",
+  "description": "/ -> Home /join -> Join /login -> Login /search -> Search",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js"
