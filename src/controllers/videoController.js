@@ -45,4 +45,22 @@ const postEdit = (req, res) => {
   return res.redirect(`/videos/${id}`);
 };
 
-export { trending, watch, getEdit, postEdit };
+const getUpload = (req, res) => {
+  return res.render("upload", { pageTitle: "Upload Video" });
+};
+const postUpload = (req, res) => {
+  //add video to array
+  const { title } = req.body;
+  const newVideo = {
+    title,
+    rating: 5,
+    comments: 2,
+    createdAt: "just now",
+    views: 1123,
+    id: videos.length + 1,
+  };
+  videos.push(newVideo);
+  return res.redirect("/");
+};
+
+export { trending, watch, getEdit, postEdit, getUpload, postUpload };
