@@ -4,7 +4,7 @@
   "description": "/ -> Home /join -> Join /login -> Login /search -> Search",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --exec babel-node src/init.js"
   },
   "repository": {
     "type": "git",
