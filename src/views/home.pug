@@ -2,7 +2,6 @@ extends base.pug
 include mixins/video
 
 block content 
-    h1 Home!
     each a in videos 
         +video(a)
     else
